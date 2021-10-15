@@ -1,0 +1,71 @@
+.introduction {
+   display: flex;
+   justify-content: space-evenly;
+   background-color: #fcfcfc;
+   @include tablet {
+       flex-wrap: wrap;
+   }
+
+&__img{
+    width: 30%;
+
+    @include tablet{
+        width: 90%;
+    }
+}
+
+   &__description {
+       @include flex(center,center);
+       flex-direction: column;
+       width: 30%;
+       text-align: center;
+       @include tablet{ 
+           width: 90%;
+           margin-top: 20px;
+       }
+      
+       &__title {
+            font-size: 17px;
+            color:#a3a9ab;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            font-weight: 300;
+       }
+
+       &__name {
+           font-weight: bold;
+           font-size:30px;
+       }
+
+       &__des {
+           font-size: 17px;
+           color:#a3a9ab;
+           margin-bottom: 30px;
+           line-height: 30px;
+           width: 80%;
+       }
+
+       &__border {
+           border: 1px solid #ececed;
+           width: 80%;
+           margin:50px 0 20px 0;
+       }
+
+       &__button {
+           cursor: pointer;
+           padding: 20px 70px;
+           border-radius: 70px;
+           background-color: red;
+           font-size: 20px;
+           color: #fff;
+           font-weight: bold;
+
+           &:hover {
+               background-color: #fff;
+               color: red;
+               border: 1px solid red;
+               transition: background-color .5s ease;
+           }
+       }
+   }
+}

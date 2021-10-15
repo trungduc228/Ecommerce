@@ -1,0 +1,194 @@
+.product {
+    @include flex(flex-start,flex-start);
+    max-width: 1480px;
+    margin: 50px auto;
+
+    @include mobile {
+        flex-direction: column;
+    }
+    &__image {
+        @include flex(flex-start,flex-start);
+        width: 60%;
+        flex-wrap: wrap;
+
+        @include mobile {
+            width: 100%;
+            padding: 0 20px 0 20px;
+            margin-bottom: 20px;
+        }
+        &__list {
+            width: 20%;
+            &__item{
+                &:nth-child(2) {
+                    margin-top: 20px;
+                }
+            }
+            
+        }
+
+        &__main {
+            flex-grow: 1;
+            padding-top: 80%;
+            position: relative;
+            margin-left: 20px;   
+            img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                height: 100%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__info {
+        margin-left: 50px;
+        flex-grow: 1;
+
+        @include mobile {
+            margin: 20px;
+        }
+        &__title {
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        &__price {
+            color:red;
+            margin: 20px 0 20px 0;
+            font-size: 25px;
+        }
+
+        &__item {
+
+            &__title {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            &__list {
+                @include flex(center,flex-start);
+
+                &__item {
+                    @include flex(center,center);
+
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 2px solid ;
+                    cursor: pointer;
+                    &:nth-child(2) {
+                        margin-left: 20px;
+                    }
+                    margin-bottom: 20px;
+
+                    &__size {
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+
+                    &.active {
+                        border-color: red;
+                    }
+                }
+                
+                .circle {   
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+
+            &__quantity {
+                @include flex(flex-start,flex-start);
+
+                &__button {
+                    @include flex(center,center);
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid black;
+                    cursor: pointer;
+                }
+
+                &__number {
+                    @include flex(center,center);
+                    width: 70px;
+                    height: 30px;
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+                }
+            }
+
+            &__button1 {
+                @include flex(flex-start,flex-start);
+                margin-top: 20px;            
+            }
+
+            &__button {
+                @include flex(center,center);
+                background-color: red;
+                color: white;
+                padding: 10px 30px;
+                font-size: 20px;
+                margin-right: 20px;
+                cursor: pointer;
+                border-radius: 5px;
+
+                @include tablet {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.product-description {
+    width: 100%;
+    padding: 2rem 2rem 3rem;
+    height:400px;
+    overflow: hidden;
+    position: relative;
+
+    @include mobile {
+        display: none;
+    }
+    &.mobile {
+        display:  none;
+
+        @include mobile {
+            display:block;
+        }
+    }
+    
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    &__content{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    &.expand {
+        height: max-content;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+        border:1px solid red;
+
+        &:hover {
+            background-color: white;
+            color: red;
+        }
+    }
+}

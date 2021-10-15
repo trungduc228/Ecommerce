@@ -1,0 +1,18 @@
+@import "./variables";
+@import "./mixins";
+@import "./base";
+
+@import "./components/header";
+@import "./components/hero-slider";
+@import "./components//Section.scss";
+@import "./components/policy-card.scss";
+@import "./components/product-card.scss";
+@import "./components/introduction.scss";
+@import "./components/sale.scss";
+@import "./components/customer-response.scss";
+@import "./components/email.scss";
+@import "./components//footer.scss";
+@import "./components/catalog-woman.scss";
+@import "./components/catalog-man.scss";
+@import "./components/product-view.scss";
+@import "./components/cart-item.scss";

@@ -1,0 +1,45 @@
+.customer-response {
+    display: flex;
+
+    @include tablet{
+        flex-wrap: wrap
+    }
+
+    &__des {
+        @include flex(center,center);
+        flex-direction: column;
+        width:120%;
+        background-color: #fcfcfc;
+
+        &__title {
+            color: #c4c4c4;
+            font-size: 20px;
+        }
+
+        &__name {
+            color: #383838;
+            font-size: 30px;
+            margin: 10px 0 20px 0;
+            text-align: center;
+        }
+
+        &__detail {
+            width: 70%;
+            text-align: center;
+            font-size:20px;
+            color: #c4c4c4;
+        }
+
+        @include tablet {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__img {
+        height: 50%;
+        @include tablet {
+            
+        }
+    }
+}

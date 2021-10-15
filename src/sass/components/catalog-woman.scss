@@ -1,0 +1,14 @@
+.catalogWoman{
+    @include flex(flex-start,flex-start);
+    max-width: 1480px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    &__filter{
+       width: 20%;
+    }
+
+    &__content{
+        flex-grow: 1;
+    }
+}

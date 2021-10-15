@@ -1,0 +1,210 @@
+.header {
+    @include flex(center,space-around);
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   padding: 0 10px;
+   background-color: #fff;
+
+   &__logo {
+        img {
+           height: 50px;
+        }
+   }
+
+   &__menu {
+    @include flex (flex-start, flex-start);
+    
+       
+       &__sale {
+           margin-top: 8px;
+           img {
+               height: 20px;
+           }
+
+           span {
+               font-size: 20px;
+           }
+
+           @include tablet {
+               display: none;
+           }
+       }
+
+       
+       &__item {
+            font-size: 20px;
+            margin-left: 15px;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+
+            
+
+            &__mobile-toggle {
+                display: none;
+
+               
+            }
+
+            &__link {
+                text-align: center;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 10px;
+                cursor: pointer;
+            }
+
+            @include tablet {
+                display: flex;
+                justify-content: space-between;
+                margin-right: 30px;
+
+                &__mobile-toggle {
+                    display: block;
+                    position: absolute;
+                    left:300px;
+
+                    @include mobile {
+                        left: 140px;
+                    }
+                }
+            }
+            
+        //    &__list {
+        //        position: absolute;
+        //        background-color: black;
+        //        border-radius: 5px;
+        //        width: 140px;
+        //        display: none;
+        //        border: 1px solid #FAFAFA;
+        //        margin-top:10px;
+
+        //        &::before {
+        //         content: "";
+        //         position: absolute;
+        //         width: 100%;
+        //         height: 20px;
+        //         top: -10px;
+        //         right: 0;
+        //        }
+        //        &__item {
+        //            @include flex(center,center);
+                   
+        //            margin-top: 10px;
+        //            text-align: center;
+        //            cursor: pointer;
+        //            font-weight: 300;
+        //            font-size: 15px;
+        //            color:#ccc;
+
+        //            &:nth-child(3) {
+        //                padding-bottom: 10px;
+        //            }
+        //        }
+        //         @include tablet {
+        //            display: none;
+        //            position: relative;
+        //            background-color: white;
+        //            width: 100px;
+
+        //            &.active {
+        //                display: block;
+                       
+        //            }
+        //        }
+              
+        //    }
+           &__link:hover &__list {
+            display: block;
+            }
+       }
+       
+        // @include tablet {
+        //     display: none;
+        //     transform: translateX(-100%);
+        //     transition: transform 0.5s ease ;
+        //     &.active {
+        //      transform: translateX(0);  
+        //      display: block;
+        //      position: absolute;
+        //      top: 0;
+        //      left: 0;
+        //      width: 100%;
+        //      height: 100vh;
+        //      background-color: #fff;
+        //      flex-direction: column;
+        //      z-index: 2000;
+                 
+        //     }
+            
+            
+ 
+        //     &__item {
+        //         margin-top: 10px;    
+        //     }
+        // }
+
+
+        @include tablet {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            flex-direction: column;
+            z-index: 2000;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease ;
+            justify-content: flex-start;
+            align-items: center;
+            &.active {
+             transform: translateX(0);               
+            }
+            
+            &__item {
+                margin-top: 10px;    
+            }
+        }
+        &__toggle {
+            position:relative;
+            display: none;
+            @include tablet {
+                display: block;
+                position: absolute;
+                left: 0;
+            }
+            i {
+                font-size: 25px;
+            }
+        }
+ 
+   }
+
+   &__user-menu {
+       @include flex(flex-end,center);
+
+       &__item {
+           margin-left: 15px;
+           i {
+               font-size: 25px;
+           }
+           @include tablet {
+               display: none;
+           }
+       }
+       &__toggle {
+           display: none;
+           i {
+               font-size: 20px;
+           }
+           @include tablet {
+               display: block;
+           }
+       }
+   }
+
+}

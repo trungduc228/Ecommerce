@@ -1,0 +1,49 @@
+.footer {
+    margin:0 20px 0 20px;
+    &__title {
+        margin-bottom: 30px;
+        font-size: 15px;
+        font-weight: bold;
+
+        @include tablet {
+            margin-top: 20px;
+        }
+    }
+
+    &__content {
+        font-size: 15px;
+        line-height: 25px;
+
+        &__system {
+            &__name {
+                display: flex;
+            }
+            &__detail{
+                p {
+                    margin-left: 15px;
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        &__call, &__zalo, &__email {
+            &__icon {
+                margin-right: 10px;
+            }
+            display: flex;
+        }
+    }
+
+    &__content1 {
+        p {
+            &:nth-child(1) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__margin1 {
+        margin-right: 30px;
+    }
+}
